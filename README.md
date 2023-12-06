@@ -1,3 +1,3 @@
 # programmers
 
-## Programmers Coding Challenges (PCCP, PCCE)
+Programmers Coding Challenges (PCCP, PCCE)
