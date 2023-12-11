@@ -9,10 +9,10 @@ import java.util.stream.*;
 
 class Solution {
     public int[] solution(int l, int r) {
-        List<Integer> filtered = IntStream.rangeClosed(l, r)
-                .filter(num -> String.valueOf(num).chars().allMatch(ch -> ch == '0' || ch == '5'))
-                .boxed()
-                .collect(Collectors.toList());
-        return filtered.isEmpty() ? new int[] {-1} : filtered.stream().mapToInt(Integer::intValue).toArray();
+        List<Integer> filtered = IntStream.rangeClosed(l, r) // l부터 r까지의 정수 범위를 생성하는 스트림
+                .filter(num -> String.valueOf(num).chars().allMatch(ch -> ch == '0' || ch == '5')) // 주어진 숫자가 "0"과 "5"로만 이루어진 숫자인지 확인하는 조건을 만족하는 숫자만 필터링
+                .boxed() // 각 숫자를 Integer 객체로 박싱하여 스트림의 요소를 객체형으로 변경
+                .collect(Collectors.toList()); // 스트림의 요소를 리스트로 수집
+        return filtered.isEmpty() ? new int[] {-1} : filtered.stream().mapToInt(Integer::intValue).toArray(); : 비어있지 않으면 리스트를 배열로 변환하여 반환
     }
 }
