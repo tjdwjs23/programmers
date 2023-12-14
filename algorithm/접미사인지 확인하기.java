@@ -5,6 +5,7 @@
 
 class Solution {
     public int solution(String myString, String isSuffix) {
-        return myString.endsWith(isSuffix) ? 1 : 0;
+        return myString.endsWith(isSuffix) ? 1 : 0; // isSuffix로 끝나면 (접미사이면) true
+        // return my_string.startsWith(isSuffix로) ? 1 : 0; // isSuffix로 시작하면 (접두사이면) true
     }
 }
