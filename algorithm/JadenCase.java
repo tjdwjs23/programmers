@@ -5,15 +5,15 @@
 
 class Solution {
     public String solution(String s) {
-        String answer = "";
+        StringBuffer answer = new StringBuffer();
 
         boolean isFirst = true;
-        for(String data : s.toLowerCase().split("")){
-            answer += isFirst ? data.toUpperCase() : data;
-            isFirst = data.equals(" ") ? true : false;
+        for (String data : s.toLowerCase().split("")) {
+            answer.append(isFirst ? data.toUpperCase() : data);
+            isFirst = data.equals(" ");
         }
 
-        return answer;
+        return answer.toString();
     }
 }
 
